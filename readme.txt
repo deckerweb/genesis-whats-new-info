@@ -41,9 +41,10 @@ This simple & lightweight plugin has currently only one task: bring you access t
 * I am open for your suggestions and feedback - Thank you for using or trying out one of my plugins!
 * Drop me a line [@deckerweb](https://twitter.com/deckerweb) on Twitter
 
-= This Plugin... =
-* ...is *Quality Made in Germany*
-* ...was created with love (and some coffee)
+= My Other Plugins =
+* [**Toolbar Extras for Elementor**](https://wordpress.org/plugins/toolbar-extras/)
+* [**Multisite Toolbar Additions**](https://wordpress.org/plugins/multisite-toolbar-additions/)
+* [**Cleaner Plugin Installer**](https://wordpress.org/plugins/cleaner-plugin-installer/)
 
 == Installation ==
 
@@ -83,20 +84,22 @@ It comes straight from Genesis core! This plugin only hooks in a few links to th
 == Changelog ==
 
 = 1.2.0 - 2018-04-20 =
+* New: Release on GitHub.com as well (for issues, development etc.), see here: [https://github.com/deckerweb/genesis-whats-new-info](https://github.com/deckerweb/genesis-whats-new-info)
+* New: New plugin banner and icon on wordpress.org
 * Fix: Make it work again, requires the newest Genesis version 2.6.0 or higher.
 * Tweak: A few subtle tweaks here and there.
-* Tweak: Updated translations.
+* Tweak: Updated translations and `.pot` file.
 
-= 1.1.1 (2014-02-02) =
-* BUGFIX: Fixed PHP notice.
+= 1.1.1 - 2014-02-02 =
+* Fix: Fixed PHP notice.
 
-= 1.1.0 (2014-01-27) =
-* NEW: Added Toolbar integration.
-* UPDATE: Improved translation loading.
-* UPDATE: Minor code and readme adjustments :).
-* UPDATE: Updated German translations and also the .pot file for all translators.
+= 1.1.0 - 2014-01-27 =
+* New: Added Toolbar integration.
+* Update: Improved translation loading.
+* Update: Minor code and readme adjustments :).
+* Update: Updated German translations and also the .pot file for all translators.
 
-= 1.0.0 (2013-07-16) =
+= 1.0.0 - 2013-07-16 =
 * Initial release
 * *NOTE:* This plugin is only for Genesis Version 1.9.x or higher!
 
