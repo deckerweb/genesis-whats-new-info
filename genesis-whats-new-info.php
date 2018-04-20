@@ -1,4 +1,4 @@
-<?php
+<?php # -*- coding: utf-8 -*-
 /**
  * Main plugin file.
  * Easy access of the Genesis What's New Admin overview page - not only on
@@ -6,23 +6,23 @@
  *
  * @package     Genesis What's New Info
  * @author      David Decker
- * @copyright   Copyright (c) 2013-2014, David Decker - DECKERWEB
+ * @copyright   Copyright (c) 2013-2018, David Decker - DECKERWEB
  * @license     GPL-2.0+
- * @link        http://deckerweb.de/twitter
+ * @link        https://deckerweb.de/twitter
  *
  * @wordpress-plugin
  * Plugin Name: Genesis What's New Info
- * Plugin URI:  http://genesisthemes.de/en/genesis-whats-new-info/
+ * Plugin URI:  https://github.com/deckerweb/genesis-whats-new-info/
  * Description: Easy access of the Genesis What's New Admin overview page - not only on updates but everytime. Makes sense, heh? :)
- * Version:     1.1.1
+ * Version:     1.2.0
  * Author:      David Decker - DECKERWEB
- * Author URI:  http://deckerweb.de/
+ * Author URI:  https://deckerweb.de/
  * License:     GPL-2.0+
- * License URI: http://www.opensource.org/licenses/gpl-license.php
+ * License URI: https://opensource.org/licenses/GPL-2.0
  * Text Domain: genesis-whats-new-info
  * Domain Path: /languages/
  *
- * Copyright (c) 2013-2014 David Decker - DECKERWEB
+ * Copyright (c) 2013-2018 David Decker - DECKERWEB
  *
  *     This file is part of Genesis What's New Info,
  *     a plugin for WordPress.
@@ -43,11 +43,9 @@
  */
 
 /**
- * Prevent direct access to this file.
- *
- * @since 1.0.0
+ * Exit if called directly.
  */
-if ( ! defined( 'WPINC' ) ) {
+if ( ! defined( 'ABSPATH' ) ) {
 	exit( 'Sorry, you are not allowed to access this file directly.' );
 }
 
@@ -64,18 +62,49 @@ define( 'GNEWI_PLUGIN_DIR', trailingslashit( dirname( __FILE__ ) ) );
 define( 'GNEWI_PLUGIN_BASEDIR', trailingslashit( dirname( plugin_basename( __FILE__ ) ) ) );
 
 
+add_action( 'init', 'ddw_gnewi_load_translations', 1 );
 /**
- * Set filter for plugin's languages directory.
+ * Load the text domain for translation of the plugin.
  *
- * @since  1.1.0
+ * @since 1.2.0
  *
- * @return string Path to plugin's languages directory.
+ * @uses  get_user_locale()
+ * @uses  load_textdomain() To load translations first from WP_LANG_DIR sub folder.
+ * @uses  load_plugin_textdomain() To additionally load default translations from plugin folder (default).
  */
-function ddw_gnewi_plugin_lang_dir() {
+function ddw_gnewi_load_translations() {
 
-	return apply_filters( 'gnewi_filter_lang_dir', GNEWI_PLUGIN_BASEDIR . 'languages' );
+	/** Load translations for Admin */
+	if ( is_admin() || is_admin_bar_showing() ) {
 
-}  // end of function ddw_gfpe_plugin_lang_dir
+		/** Set textdomain */
+		$gnewi_textdomain = 'genesis-whats-new-info';
+
+		/** The 'plugin_locale' filter is also used by default in load_plugin_textdomain() */
+		$locale = esc_attr(
+			apply_filters(
+				'plugin_locale',
+				get_user_locale(),
+				$gnewi_textdomain
+			)
+		);
+
+		/** Translations: First, look in WordPress' "languages" folder = custom & update-secure! */
+		load_textdomain(
+			$gnewi_textdomain,
+			trailingslashit( WP_LANG_DIR ) . trailingslashit( $gnewi_textdomain ) . $gnewi_textdomain . '-' . $locale . '.mo'
+		);
+
+		/** Translations: Secondly, look in plugin's "languages" folder = default */
+		load_plugin_textdomain(
+			$gnewi_textdomain,
+			FALSE,
+			GNEWI_PLUGIN_BASEDIR . 'languages'
+		);
+
+	}  // end if
+
+}  // end function
 
 
 register_activation_hook( __FILE__, 'ddw_gnewi_activation_check' );
@@ -84,7 +113,7 @@ register_activation_hook( __FILE__, 'ddw_gnewi_activation_check' );
  *
  * @since 1.0.0
  *
- * @uses  load_plugin_textdomain()
+ * @uses  ddw_gnewi_load_translations()
  * @uses  get_template_directory()
  * @uses  deactivate_plugins()
  * @uses  wp_die()
@@ -92,7 +121,7 @@ register_activation_hook( __FILE__, 'ddw_gnewi_activation_check' );
 function ddw_gnewi_activation_check() {
 
 	/** Load translations to display for the activation message. */
-	load_plugin_textdomain( 'genesis-whats-new-info', FALSE, esc_attr( ddw_gnewi_plugin_lang_dir() ) );
+	ddw_gnewi_load_translations();
 
 	/** Check for activated Genesis Framework (= template/parent theme) */
 	if ( ! class_exists( 'Genesis_Admin_Upgraded' ) ) {
@@ -112,12 +141,12 @@ function ddw_gnewi_activation_check() {
 		wp_die(
 			$gnewi_deactivation_message,
 			__( 'Plugin', 'genesis-whats-new-info' ) . ': ' . __( 'Genesis What\'s New Info', 'genesis-whats-new-info' ),
-			array( 'back_link' => true )
+			array( 'back_link' => TRUE )
 		);
 
-	}  // end-if Genesis check
+	}  // end if
 
-}  // end of function ddw_gnewi_activation_check
+}  // end function
 
 
 add_action( 'init', 'ddw_gnewi_init', 1 );
@@ -125,43 +154,13 @@ add_action( 'init', 'ddw_gnewi_init', 1 );
  * Load admin helper functions - only within 'wp-admin'.
  * 
  * @since 1.0.0
- *
- * @uses  is_admin() To check if we are within admin area.
- * @uses  is_admin_bar_showing() To check for activated Toolbar.
- * @uses  load_textdomain()	To load translations first from WP_LANG_DIR sub folder.
- * @uses  load_plugin_textdomain() To additionally load default translations from plugin folder (default).
  */
 function ddw_gnewi_init() {
 
-	/** Load translations for Admin */
-	if ( is_admin() || is_admin_bar_showing() ) {
-
-		/** Set textdomain */
-		$gnewi_textdomain = 'genesis-whats-new-info';
-
-		/** The 'plugin_locale' filter is also used by default in load_plugin_textdomain() */
-		$locale = apply_filters( 'plugin_locale', get_locale(), $gnewi_textdomain );
-
-		/** Set filter for WordPress languages directory */
-		$gnewi_wp_lang_dir = apply_filters(
-			'gnewi_filter_wp_lang_dir',
-			trailingslashit( WP_LANG_DIR ) . 'genesis-whats-new-info/' . $gnewi_textdomain . '-' . $locale . '.mo'
-		);
-
-		/** Translations: First, look in WordPress' "languages" folder = custom & update-secure! */
-		load_textdomain( $gnewi_textdomain, $gnewi_wp_lang_dir );
-
-		/** Translations: Secondly, look in plugin's "languages" folder = default */
-		load_plugin_textdomain( $gnewi_textdomain, FALSE, esc_attr( ddw_gnewi_plugin_lang_dir() ) );
-
-	}  // end-if is_admin() check
-
-	/** Load the admin and frontend functions only when needed */
+	/** Load the admin functions only when needed */
 	if ( is_admin() ) {
-
 		require_once( GNEWI_PLUGIN_DIR . 'includes/gnewi-admin-extras.php' );
-
-	}  // end-if is_admin() check
+	}
 
 	/** Add "Widgets Page" link to plugin page */
 	if ( is_admin() && current_user_can( 'edit_theme_options' ) ) {
@@ -171,18 +170,15 @@ function ddw_gnewi_init() {
 			'ddw_gnewi_admin_page_link'
 		);
 
-	}  // end-if is_admin() & cap check
+	}  // end if
 
-}  // end of function ddw_gnewi_init
+}  // end function
 
 
 /**
  * Check for active Genesis admin menu display options - per user.
  *
  * @since  1.1.0
- *
- * @uses   wp_get_current_user()
- * @uses   get_the_author_meta()
  *
  * @return bool Returns TRUE if any of the Genesis core admin pages are active
  *              for the current user, otherwise FALSE.
@@ -207,7 +203,7 @@ function ddw_gnewi_genesis_admin_menu_active() {
 
 	}  // end if
 
-}  // end of function ddw_gnewi_genesis_admin_menu_active
+}  // end function
 
 
 add_action( 'admin_menu', 'ddw_gnewi_admin_init', 11 );
@@ -217,19 +213,16 @@ add_action( 'admin_menu', 'ddw_gnewi_admin_init', 11 );
  * @since 1.0.0
  *
  * @uses  ddw_gnewi_genesis_admin_menu_active()
- * @uses  add_submenu_page()
  * @uses  genesis_is_menu_page()
  * @uses  PARENT_THEME_BRANCH
- * @uses  Genesis_Admin_Upgraded::admin() 	As the callback function (comes directly from Genesis!).
+ * @uses  ddw_gnewi_render_page_genesis_upgraded() 	Callback to render Genesis' page.
  */
 function ddw_gnewi_admin_init() {
 
 	/** If in 'wp-admin' include admin settings & help tabs */
 	if ( ! ddw_gnewi_genesis_admin_menu_active() ) {
-
 		return;
-
-	}  // end if
+	}
 
 	/** Get Genesis branch version */
 	$parent_theme_branch = ( defined( 'PARENT_THEME_BRANCH' ) && PARENT_THEME_BRANCH ) ? PARENT_THEME_BRANCH : '';
@@ -241,7 +234,7 @@ function ddw_gnewi_admin_init() {
 		sprintf( __( 'What\'s New', 'genesis-whats-new-info' ) . ' <small>(%s)</small>', $parent_theme_branch ),
 		'edit_theme_options',
 		'genesis-upgraded',
-		array( 'Genesis_Admin_Upgraded', 'admin' )
+		'ddw_gnewi_render_page_genesis_upgraded'
 	);
 
 	/** Load default Thickbox Scripts */
@@ -251,7 +244,19 @@ function ddw_gnewi_admin_init() {
 
 	}  // end if
 
-}  // end of function ddw_gnewi_admin_init
+}  // end function
+
+
+/**
+ * Render the Genesis Upgraded page. This is a necessary in-between step.
+ *
+ * @since 1.2.0
+ */
+function ddw_gnewi_render_page_genesis_upgraded() {
+
+	require_once( GENESIS_VIEWS_DIR . '/pages/genesis-admin-upgraded.php' );
+	
+}  // end function
 
 
 add_action( 'admin_notices', 'ddw_gnewi_upgrade_notice_helper', 5 );
@@ -268,7 +273,7 @@ function ddw_gnewi_upgrade_notice_helper() {
 	/** Load our own notice */
 	add_action( 'admin_notices', 'ddw_gnewi_genesis_upgraded_notice' );
 
-}  // end of function function ddw_gnewi_upgrade_notice_helper
+}  // end function
 
 
 /**
@@ -314,7 +319,7 @@ function ddw_gnewi_genesis_upgraded_notice() {
 
 	}  // end-if 'upgraded' request check
 
-}  // end of function ddw_gnewi_genesis_upgraded_notice
+}  // end function
 
 
 add_action( 'admin_bar_menu', 'ddw_gnewi_add_toolbar_items', 90 );
@@ -329,24 +334,23 @@ add_action( 'admin_bar_menu', 'ddw_gnewi_add_toolbar_items', 90 );
  */
 function ddw_gnewi_add_toolbar_items() {
 
-	/** Bail early if conditions not met */
+	/** Bail early if conditions are not met */
 	if ( ! is_user_logged_in()
 		|| ! is_admin_bar_showing()
 		|| ! current_user_can( 'edit_theme_options' )
 		|| ! ddw_gnewi_genesis_admin_menu_active()
 	) {
-
 		return;
-
-	}  // end if
+	}
 
 	/** Add our Toolbar main item */
 	$GLOBALS[ 'wp_admin_bar' ]->add_node( array(  
 		'parent' => 'wp-logo-default',  
 		'id'     => 'genesis-whats-new-info',  
 		'title'  => __( 'Genesis: About &amp; What\'s New', 'genesis-whats-new-info' ),
-		'href'   => admin_url( 'admin.php?page=genesis-upgraded' ),  
-		'meta'   => array( 'title' => _x( 'Genesis: About &amp; What\'s New', 'Translators: for the tooltip', 'genesis-whats-new-info' ) )
+		'href'   => admin_url( 'admin.php?page=genesis-upgraded' ), 
+		/* translators: Label of link title attribute */
+		'meta'   => array( 'title' => _x( 'Genesis: About &amp; What\'s New', 'Label of link title attribute', 'genesis-whats-new-info' ) )
 	) );
 
-}  // end of function ddwpinfo_add_toolbar_items
+}  // end function

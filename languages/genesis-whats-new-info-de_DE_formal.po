@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Genesis What's New Info\n"
 "POT-Creation-Date: 2018-04-20 15:09+0200\n"
-"PO-Revision-Date: 2018-04-20 15:12+0200\n"
+"PO-Revision-Date: 2018-04-20 15:09+0200\n"
 "Last-Translator: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
 "Language-Team: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
 "Language: de_DE\n"
@@ -51,7 +51,7 @@ msgstr "Was ist neu"
 #: genesis-whats-new-info.php:302
 #, php-format
 msgid "Congratulations! You are now rocking Genesis %s"
-msgstr "Glückwunsch! Du rockst jetzt mit Genesis, Version %s"
+msgstr "Glückwunsch! Sie rocken jetzt mit Genesis, Version %s"
 
 #: genesis-whats-new-info.php:310
 msgid "See what's new in this version/ branch"
