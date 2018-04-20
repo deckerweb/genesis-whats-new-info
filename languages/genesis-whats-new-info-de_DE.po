@@ -1,0 +1,90 @@
+# This German Language File: Copyright (C) 2013-2014 by David Decker of deckerweb.de & genesisthemes.de
+# This file is distributed under the same license as the Genesis What's New Info plugin package.
+#
+# Weitere deutsche Sprachdateien fuer Genesis Framework, Genesis Child Themes und Genesis Plugins
+# sowie WordPress Plugins und Themes sind hier zu finden:
+# --> http://deckerweb.de/sprachdateien/
+#
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2014-02-02 18:33:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/0.1\n"
+"Project-Id-Version: Genesis What's New Info\n"
+
+#: genesis-whats-new-info.php:0
+msgid "1.1.1"
+msgstr "1.1.1"
+
+#: genesis-whats-new-info.php:347
+msgid "Genesis: About &amp; What's New"
+msgstr "Genesis: Über &amp; Was neu ist"
+
+#: genesis-whats-new-info.php:349
+msgctxt "Translators: for the tooltip"
+msgid "Genesis: About &amp; What's New"
+msgstr "Genesis Framework: Hintergrundinfos und Neuigkeiten zur aktuellen Hauptversion"
+
+#: genesis-whats-new-info.php:297
+msgid "Congratulations! You are now rocking Genesis %s"
+msgstr "Glückwunsch! Sie rocken jetzt mit Genesis, Version %s"
+
+#: genesis-whats-new-info.php:305
+msgid "See what's new in this version/ branch"
+msgstr "Schauen, was neu ist neu in dieser Version"
+
+#: genesis-whats-new-info.php:0 genesis-whats-new-info.php:106
+#: genesis-whats-new-info.php:114
+msgid "Genesis What's New Info"
+msgstr "Genesis Was ist neu Infos"
+
+#: genesis-whats-new-info.php:0
+msgid "http://genesisthemes.de/en/genesis-whats-new-info/"
+msgstr "http://genesisthemes.de/en/genesis-whats-new-info/"
+
+#: genesis-whats-new-info.php:0
+msgid "Easy access of the Genesis What's New Admin overview page - not only on updates but everytime. Makes sense, heh? :)"
+msgstr "Einfacher Zugang zur 'Genesis Was ist neu' Admin-Übersichtsseite - nicht nur nach Aktualisierungen, sondern immer. Ergibt ja auch Sinn :)"
+
+#: genesis-whats-new-info.php:0
+msgid "David Decker - DECKERWEB"
+msgstr "David Decker - DECKERWEB.de"
+
+#: genesis-whats-new-info.php:0
+msgid "http://deckerweb.de/"
+msgstr "http://deckerweb.de/"
+
+#: genesis-whats-new-info.php:105
+msgid "Sorry, you cannot activate the %1$s plugin unless you have installed the %2$sGenesis Framework%3$s."
+msgstr "Hinweis: Das Plugin '%1$s' kann <em>nicht</em> aktiviert werden, solange die neueste Version des %2$sGenesis Frameworks%3$s nicht installiert ist."
+
+#: genesis-whats-new-info.php:114
+msgid "Plugin"
+msgstr "Plugin"
+
+#: includes/gnewi-admin-extras.php:65
+msgid "Genesis What's New"
+msgstr "Genesis Was ist neu"
+
+#: genesis-whats-new-info.php:240
+msgid "Welcome to Genesis %s"
+msgstr "Willkommen zu Genesis Version %s"
+
+#: genesis-whats-new-info.php:241 includes/gnewi-admin-extras.php:67
+msgid "What's New"
+msgstr "Was ist neu"
+
+#: includes/gnewi-admin-extras.php:64
+msgid "Go to the %s admin page"
+msgstr "Zur %s Adminseite gehen &hellip;"
+
+#: includes/gnewi-admin-extras.php:104
+msgid "Translations"
+msgstr "Übersetzungen"
+
+#: includes/gnewi-admin-extras.php:106
+msgid "Donate"
+msgstr "Spenden"
