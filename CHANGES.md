@@ -10,6 +10,17 @@
 
 ## Changelog of the Plugin
 
+### 1.3.0 - 2018-08-23 
+* New: Added extra "At a Glance" meta box on Genesis Theme Settings with proper version info, and links to: What's New page, Changelog website, StudioPress Blog, #GenesisWP Facebook Group, #GenesisWP Slack Channel, #GenesisWP Tweets -- Note: this is fully optional, meta box can be removed via "Screen Options", and also via our filter/ WP Core function
+* New: Added `composer.json` file to the plugin's root folder - this is great for developers using Composer
+* New: Added `README.md` file for plugin's GitHub.com repository to make it more readable there
+* Tweak: Simplied rendering of What's New Page again, hooray! :)
+* Tweak: Changed all filter tags to new format!
+* Tweak: Added plugins recommendations library by deckerweb to improve the plugin installer tips (old filter function got removed)
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+* Tweak: Enhanced, improved and corrected Readme.txt file here - also tweaked FAQ entry
+
+
 ### 1.2.0 - 2018-04-20
 
 * New: Release on GitHub.com as well (for issues, development etc.), see here: [https://github.com/deckerweb/genesis-whats-new-info](https://github.com/deckerweb/genesis-whats-new-info)
