@@ -24,26 +24,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 /**
- * Setting internal plugin helper values.
- *
- * @since 1.1.0
- */
-function ddw_gnewi_info_values() {
-
-	$gnewi_info = array(
-
-		'url_translate'     => 'https://translate.wordpress.org/projects/wp-plugins/genesis-whats-new-info',
-		'url_donate'        => 'https://www.paypal.me/deckerweb',
-		'url_plugin'        => 'https://github.com/deckerweb/genesis-whats-new-info/'
-
-	);  // end of array
-
-	return $gnewi_info;
-
-}  // end function
-
-
-/**
  * Add Admin link to plugin page.
  *
  * @since  1.0.0
@@ -69,7 +49,7 @@ function ddw_gnewi_admin_page_link( $gnewi_links ) {
 	array_unshift( $gnewi_links, $gnewi_admin_link );
 
 	/** Display plugin settings links */
-	return apply_filters( 'gnewi_filter_admin_page_link', $gnewi_links );
+	return apply_filters( 'gnewi/filter/plugins_page/admin_link', $gnewi_links );
 
 }  // end function
 
@@ -79,8 +59,10 @@ add_filter( 'plugin_row_meta', 'ddw_gnewi_plugin_links', 10, 2 );
  * Add various support links to plugin page.
  *
  * @since  1.0.0
+ * @since  1.3.0 Improved link building.
  *
  * @uses   ddw_gnewi_info_values()
+ * @uses   ddw_gnewi_get_info_link()
  *
  * @param  array  $gnewi_links (Default) Array of plugin meta links
  * @param  string $gnewi_file  URL of base plugin file
@@ -99,80 +81,117 @@ function ddw_gnewi_plugin_links( $gnewi_links, $gnewi_file ) {
 
 		$gnewi_info = (array) ddw_gnewi_info_values();
 
-		$gnewi_links[] = '<a href="' . esc_url( $gnewi_info[ 'url_translate' ] ) . '" target="_blank" rel="nofollow noopener noreferrer" title="' . __( 'Translations', 'genesis-whats-new-info' ) . '">' . __( 'Translations', 'genesis-whats-new-info' ) . '</a>';
+		/* translators: Plugins page listing */
+		$gnewi_links[] = ddw_gnewi_get_info_link( 'url_translate', esc_html_x( 'Translations', 'Plugins page listing', 'genesis-whats-new-info' ) );
 
-		$gnewi_links[] = '<a class="button" href="' . esc_url( $gnewi_info[ 'url_donate' ] ) . '" target="_blank" rel="nofollow noopener noreferrer" title="' . __( 'Donate', 'genesis-whats-new-info' ) . '"><strong>' . __( 'Donate', 'genesis-whats-new-info' ) . '</strong></a>';
+		/* translators: Plugins page listing */
+		$gnewi_links[] = ddw_gnewi_get_info_link( 'url_donate', esc_html_x( 'Donate', 'Plugins page listing', 'genesis-whats-new-info' ), 'button-primary' );
 
 	}  // end-if plugin links
 
 	/** Output the links */
-	return apply_filters( 'gnewi_filter_plugin_links', $gnewi_links );
+	return apply_filters( 'gnewi/filter/plugins_page/more_links', $gnewi_links );
 
 }  // end function
 
 
-add_filter( 'plugins_api_result', 'ddw_gnewi_add_tbex_api_result', 11, 3 );
 /**
- * Filter plugin fetching API results to inject plugin "Cleaner Plugin Installer".
+ * Optionally tweaking Plugin API results to make more useful recommendations to
+ *   the user.
  *
- * @since   1.2.0
- *
- * Original code by Remy Perona/ WP-Rocket.
- * @author  Remy Perona
- * @link    https://wp-rocket.me/
- * @license GPL-2.0+
- * 
- * @param   object|WP_Error $result Response object or WP_Error.
- * @param   string          $action The type of information being requested from the Plugin Install API.
- * @param   object          $args   Plugin API arguments.
- *
- * @return array Updated array of results.
+ * @since 1.2.0
+ * @since 1.3.0 Complete refactoring, using library class DDWlib Plugin
+ *              Installer Recommendations
  */
-function ddw_gnewi_add_tbex_api_result( $result, $action, $args ) {
 
-	if ( empty( $args->browse ) ) {
-		return $result;
-	}
+add_filter( 'ddwlib_plir/filter/plugins', 'ddw_gnewi_register_plugin_recommendations' );
+/**
+ * Register specific plugins for the class "DDWlib Plugin Installer
+ *   Recommendations".
+ *   Note: The top-level array keys are plugin slugs from the WordPress.org
+ *         Plugin Directory.
+ *
+ * @since  1.3.0
+ *
+ * @param  array $plugins Array holding all plugin recommendations, coming from
+ *                        the class and the filter.
+ * @return array Filtered and merged array of all plugin recommendations.
+ */
+function ddw_gnewi_register_plugin_recommendations( array $plugins ) {
+  
+  	/** Remove our own slug when we are already active :) */
+  	if ( isset( $plugins[ 'genesis-whats-new-info' ] ) ) {
+  		$plugins[ 'genesis-whats-new-info' ] = null;
+  	}
 
-	if ( 'featured' !== $args->browse
-		&& 'recommended' !== $args->browse
-		&& 'popular' !== $args->browse
-	) {
-		return $result;
-	}
-
-	if ( ! isset( $result->info[ 'page' ] ) || 1 < $result->info[ 'page' ] ) {
-		return $result;
-	}
-
-	/** Check if plugin active */
-	if ( ( is_plugin_active( 'toolbar-extras/toolbar-extras.php' ) || is_plugin_active_for_network( 'toolbar-extras/toolbar-extras.php' ) ) ) {
-		return $result;
-	}
-
-	/** Grab all slugs from the api results. */
-	$result_slugs = wp_list_pluck( $result->plugins, 'slug' );
-
-	$query_fields = array(
-		'icons'             => TRUE,
-		'active_installs'   => TRUE,
-		'short_description' => TRUE,
-		'group'             => TRUE,
+  	/** Register our additional plugin recommendations */
+	$gnewi_plugins = array(
+		'genesis-layout-extras' => array(
+			'featured'    => 'yes',
+			'recommended' => 'yes',
+			'popular'     => 'yes',
+		),
+		'genesis-widgetized-footer' => array(
+			'featured'    => 'yes',
+			'recommended' => 'yes',
+			'popular'     => 'yes',
+		),
+		'genesis-widgetized-notfound' => array(
+			'featured'    => 'yes',
+			'recommended' => 'yes',
+			'popular'     => 'yes',
+		),
+		'genesis-widgetized-archive' => array(
+			'featured'    => 'yes',
+			'recommended' => 'yes',
+			'popular'     => 'no',
+		),
+		'blox-lite' => array(
+			'featured'    => 'yes',
+			'recommended' => 'yes',
+			'popular'     => 'no',
+		),
+		'genesis-title-toggle' => array(
+			'featured'    => 'yes',
+			'recommended' => 'yes',
+			'popular'     => 'yes',
+		),
+		'genesis-footer-builder' => array(
+			'featured'    => 'yes',
+			'recommended' => 'yes',
+			'popular'     => 'no',
+		),
+		'display-featured-image-genesis' => array(
+			'featured'    => 'yes',
+			'recommended' => 'yes',
+			'popular'     => 'no',
+		),
+		'genesis-enews-extended' => array(
+			'featured'    => 'no',
+			'recommended' => 'no',
+			'popular'     => 'yes',
+		),
+		'genesis-simple-edits' => array(
+			'featured'    => 'no',
+			'recommended' => 'no',
+			'popular'     => 'yes',
+		),
+		'genesis-simple-sidebars' => array(
+			'featured'    => 'no',
+			'recommended' => 'yes',
+			'popular'     => 'yes',
+		),
+		'genesis-simple-hooks' => array(
+			'featured'    => 'no',
+			'recommended' => 'no',
+			'popular'     => 'yes',
+		),
 	);
 
-	$tbex_query_args = array(
-		'slug'   => 'toolbar-extras',	// plugin slug from wordpress.org
-		'fields' => $query_fields,
-	);
-
-	$tbex_data = plugins_api( 'plugin_information', $tbex_query_args );
-
-	if ( is_wp_error( $tbex_data ) ) {
-		return $result;
-	}
-
-	array_unshift( $result->plugins, $tbex_data );
-
-	return $result;
+  	/** Merge with the existing recommendations and return */
+	return array_merge( $plugins, $gnewi_plugins );
 
 }  // end function
+
+/** Include class DDWlib Plugin Installer Recommendations */
+require_once( MSTBA_PLUGIN_DIR . 'includes/ddwlib-plugin-installer-recommendations.php' );

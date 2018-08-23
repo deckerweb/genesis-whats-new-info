@@ -1,0 +1,22 @@
+{
+  "name": "deckerweb/genesis-whats-new-info",
+  "description": "WordPress plugin that brings easy access of the Genesis What's New Admin overview page - not only on updates but everytime. Makes sense, heh? :)",
+  "keywords": ["genesis", "genesiswp", "genesis framework", "what's new", "version", "admin", "new", "upgrade", "update", "deckerweb"],
+  "type": "wordpress-plugin",
+  "homepage": "https://github.com/deckerweb/genesis-whats-new-info",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "David Decker",
+      "homepage": "https://deckerweb.de/",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/deckerweb/genesis-whats-new-info/issues",
+    "source": "https://github.com/deckerweb/genesis-whats-new-info"
+  },
+  "require": {
+    "php": ">=5.6"
+  }
+}

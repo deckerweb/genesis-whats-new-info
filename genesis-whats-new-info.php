@@ -4,23 +4,25 @@
  * Easy access of the Genesis What's New Admin overview page - not only on
  *    updates but everytime. Makes sense, heh? :)
  *
- * @package     Genesis What's New Info
- * @author      David Decker
- * @copyright   Copyright (c) 2013-2018, David Decker - DECKERWEB
- * @license     GPL-2.0+
- * @link        https://deckerweb.de/twitter
+ * @package      Genesis What's New Info
+ * @author       David Decker
+ * @copyright    Copyright (c) 2013-2018, David Decker - DECKERWEB
+ * @license      GPL-2.0+
+ * @link         https://deckerweb.de/twitter
  *
  * @wordpress-plugin
- * Plugin Name: Genesis What's New Info
- * Plugin URI:  https://github.com/deckerweb/genesis-whats-new-info/
- * Description: Easy access of the Genesis What's New Admin overview page - not only on updates but everytime. Makes sense, heh? :)
- * Version:     1.2.0
- * Author:      David Decker - DECKERWEB
- * Author URI:  https://deckerweb.de/
- * License:     GPL-2.0+
- * License URI: https://opensource.org/licenses/GPL-2.0
- * Text Domain: genesis-whats-new-info
- * Domain Path: /languages/
+ * Plugin Name:  Genesis What's New Info
+ * Plugin URI:   https://github.com/deckerweb/genesis-whats-new-info/
+ * Description:  Easy access of the Genesis What's New Admin overview page - not only on updates but everytime. Makes sense, heh? :)
+ * Version:      1.3.0
+ * Author:       David Decker - DECKERWEB
+ * Author URI:   https://deckerweb.de/
+ * License:      GPL-2.0+
+ * License URI:  https://opensource.org/licenses/GPL-2.0
+ * Text Domain:  genesis-whats-new-info
+ * Domain Path:  /languages/
+ * Requires WP:  4.7
+ * Requires PHP: 5.6
  *
  * Copyright (c) 2013-2018 David Decker - DECKERWEB
  *
@@ -131,9 +133,10 @@ function ddw_gnewi_activation_check() {
 
 		/** Message: no Genesis active */
 		$gnewi_deactivation_message = sprintf(
+			/* translators: 1 = Plugin name / 2 & 3 = Open and close anchor tags */
 			__( 'Sorry, you cannot activate the %1$s plugin unless you have installed the %2$sGenesis Framework%3$s.', 'genesis-whats-new-info' ),
 			__( 'Genesis What\'s New Info', 'genesis-whats-new-info' ),
-			'<a href="http://deckerweb.de/go/genesis/" target="_new"><strong><em>',
+			'<a href="https://deckerweb.de/go/genesis/" target="_blank" rel="nofollow noopener noreferrer"><strong><em>',
 			'</em></strong></a>'
 		);
 
@@ -154,19 +157,36 @@ add_action( 'init', 'ddw_gnewi_init', 1 );
  * Load admin helper functions - only within 'wp-admin'.
  * 
  * @since 1.0.0
+ * @since 1.3.0 Enhanced functionality.
  */
 function ddw_gnewi_init() {
 
 	/** Load the admin functions only when needed */
 	if ( is_admin() ) {
-		require_once( GNEWI_PLUGIN_DIR . 'includes/gnewi-admin-extras.php' );
-	}
 
-	/** Add "Widgets Page" link to plugin page */
-	if ( is_admin() && current_user_can( 'edit_theme_options' ) ) {
+		require_once( GNEWI_PLUGIN_DIR . 'includes/gnewi-functions-global.php' );
+		require_once( GNEWI_PLUGIN_DIR . 'includes/gnewi-deprecated.php' );
+
+		if ( apply_filters( 'gnewi/filter/genesis_ataglance', TRUE ) ) {
+			require_once( GNEWI_PLUGIN_DIR . 'includes/gnewi-genesis-metabox.php' );
+		}
+
+		require_once( GNEWI_PLUGIN_DIR . 'includes/gnewi-admin-extras.php' );
+
+	}  // end if
+
+	/** Add "What's New" page link to plugin page */
+	if ( ( is_admin() || is_network_admin() )
+		&& current_user_can( 'edit_theme_options' )
+	) {
 
 		add_filter(
 			'plugin_action_links_' . plugin_basename( __FILE__ ),
+			'ddw_gnewi_admin_page_link'
+		);
+
+		add_filter(
+			'network_admin_plugin_action_links_' . plugin_basename( __FILE__ ),
 			'ddw_gnewi_admin_page_link'
 		);
 
@@ -211,11 +231,13 @@ add_action( 'admin_menu', 'ddw_gnewi_admin_init', 11 );
  * Load plugin's admin settings page - only within 'wp-admin'.
  * 
  * @since 1.0.0
+ * @since 1.2.0 Make it work for Genesis 2.6.0 or higher.
+ * @since 1.3.0 Simplified, adhere more to WordPress standards.
  *
  * @uses  ddw_gnewi_genesis_admin_menu_active()
  * @uses  genesis_is_menu_page()
  * @uses  PARENT_THEME_BRANCH
- * @uses  ddw_gnewi_render_page_genesis_upgraded() 	Callback to render Genesis' page.
+ * @uses  ddw_gnewi_render_page_genesis_upgraded() Callback to render Genesis' page.
  */
 function ddw_gnewi_admin_init() {
 
@@ -233,29 +255,14 @@ function ddw_gnewi_admin_init() {
 		sprintf( __( 'Welcome to Genesis %s', 'genesis-whats-new-info' ), $parent_theme_branch ),
 		sprintf( __( 'What\'s New', 'genesis-whats-new-info' ) . ' <small>(%s)</small>', $parent_theme_branch ),
 		'edit_theme_options',
-		'genesis-upgraded',
-		'ddw_gnewi_render_page_genesis_upgraded'
+		admin_url( 'admin.php?page=genesis-upgraded' )
 	);
 
 	/** Load default Thickbox Scripts */
 	if ( function_exists( 'genesis_is_menu_page' ) && genesis_is_menu_page( 'genesis-upgraded' ) ) {
-
 		add_action( 'admin_enqueue_scripts', 'add_thickbox' );
+	}
 
-	}  // end if
-
-}  // end function
-
-
-/**
- * Render the Genesis Upgraded page. This is a necessary in-between step.
- *
- * @since 1.2.0
- */
-function ddw_gnewi_render_page_genesis_upgraded() {
-
-	require_once( GENESIS_VIEWS_DIR . '/pages/genesis-admin-upgraded.php' );
-	
 }  // end function
 
 
@@ -305,7 +312,7 @@ function ddw_gnewi_genesis_upgraded_notice() {
 
 		$gnewi_whats_new = sprintf(
 				' &rarr; <a href="%1$s" title="%2$s">%3$s</a>',
-				admin_url( 'admin.php?page=genesis-upgraded' ),
+				esc_url( admin_url( 'admin.php?page=genesis-upgraded' ) ),
 				esc_html( $gnewi_congrats ),
 				__( 'See what\'s new in this version/ branch', 'genesis-whats-new-info' )
 		);
@@ -344,13 +351,15 @@ function ddw_gnewi_add_toolbar_items() {
 	}
 
 	/** Add our Toolbar main item */
-	$GLOBALS[ 'wp_admin_bar' ]->add_node( array(  
-		'parent' => 'wp-logo-default',  
-		'id'     => 'genesis-whats-new-info',  
-		'title'  => __( 'Genesis: About &amp; What\'s New', 'genesis-whats-new-info' ),
-		'href'   => admin_url( 'admin.php?page=genesis-upgraded' ), 
-		/* translators: Label of link title attribute */
-		'meta'   => array( 'title' => _x( 'Genesis: About &amp; What\'s New', 'Label of link title attribute', 'genesis-whats-new-info' ) )
-	) );
+	$GLOBALS[ 'wp_admin_bar' ]->add_node(
+		array(
+			'id'     => 'genesis-whats-new-info', 
+			'parent' => 'wp-logo-default',
+			'title'  => esc_attr__( 'Genesis: About &amp; What\'s New', 'genesis-whats-new-info' ),
+			'href'   => esc_url( admin_url( 'admin.php?page=genesis-upgraded' ) ),
+			/* translators: Label of link title attribute */
+			'meta'   => array( 'title' => esc_attr_x( 'Genesis: About &amp; What\'s New', 'Label of link title attribute', 'genesis-whats-new-info' ) )
+		)
+	);
 
 }  // end function

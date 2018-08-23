@@ -1,58 +1,67 @@
-=== Genesis What's New Info ===
-Contributors: daveshine, deckerweb, wpautobahn
-Donate link: https://www.paypal.me/deckerweb
-Tags: genesis, genesiswp, genesis framework, what's new, version, branch, updates, update, upgrade, admin, deckerweb
-Requires at least: 4.7 plus Genesis Framework
-Tested up to: 4.9.8
-Requires PHP: 5.6
-Stable tag: 1.3.0
-License: GPL-2.0+
-License URI: https://opensource.org/licenses/GPL-2.0
+# Genesis What's New Info 
+**Contributors:** daveshine, deckerweb, wpautobahn  
+**Donate link:** https://www.paypal.me/deckerweb  
+**Tags:** genesis, genesiswp, genesis framework, what's new, version, branch, updates, update, upgrade, admin, deckerweb  
+**Requires at least:** 4.7 plus Genesis Framework  
+**Tested up to:** 4.9.8  
+**Requires PHP:** 5.6  
+**Stable tag:** 1.3.0  
+**License:** GPL-2.0+  
+**License URI:** https://opensource.org/licenses/GPL-2.0  
 
 Easy access of the Genesis What's New Admin overview page - not only on updates but everytime. Makes sense, heh? :)
 
-== Description ==
+
+## Description 
 
 ## Get Access to Genesis What's New Admin Page
 This simple & lightweight plugin has currently only one task: bring you access to the "What's New" page for Genesis Framework. You can access it everytime in the left-hand admin menu under "Genesis > What's New". (Before this plugin it did only show up when you did an auto update of Genesis.)
 
 **Please note:** The plugin requires the *Genesis Theme Framework*, a paid premium product released by StudioPress/ Rainmaker Digital LLC (via studiopress.com).
 
-= Video of Plugin's Live Demo and Walkthrough: =
+
+### Video of Plugin's Live Demo and Walkthrough: 
 [youtube https://www.youtube.com/watch?v=kxK3dBoqXHo]
 [**original video link**](https://www.youtube.com/watch?v=kxK3dBoqXHo) *by plugin developer David Decker*
 
-= Requirements =
+
+### Requirements 
 * Genesis version 2.6.x or higher (obviously :).
 * At least capability of `edit_theme_options` for the user.
 * ...and the user must have any of the default Genesis admin pages activated in the user profile.
 
-= Future Roadmap =
+
+### Future Roadmap 
 * Maybe further info/ features will be added to this plugin from time to time.
 * *Suggestions can be made via contact info below.*
 
-= Localization =
+
+### Localization 
 * English (default) - always included
 * German (de_DE) - always included
 * German formal (de_DE_formal) - always included
 * `.pot` file (`genesis-whats-new-info.pot`) for translators is also always included :)
 * Easy plugin translation platform: [Translate "Genesis What's New Info"...](https://translate.wordpress.org/projects/wp-plugins/genesis-whats-new-info)
 
-= Feedback =
+
+### Feedback 
 * I am open for your suggestions and feedback - Thank you for using or trying out one of my plugins!
 * Drop me a line [@deckerweb](https://twitter.com/deckerweb) on Twitter
 
-== My Other Plugins ==
+
+## My Other Plugins 
 * [**Toolbar Extras for Elementor - WordPress Admin Bar Enhanced**](https://wordpress.org/plugins/toolbar-extras/)
 * [**Builder Template Categories - for WordPress Page Builders**](https://wordpress.org/plugins/builder-template-categories/)
 * [Multisite Toolbar Additions](https://wordpress.org/plugins/multisite-toolbar-additions/)
 * [Cleaner Plugin Installer](https://wordpress.org/plugins/cleaner-plugin-installer/)
 
-== Installation ==
+
+## Installation 
 
 **NOTE:** Only works with *Genesis Framework* as the parent theme. This is a paid premium product by StudioPress/ Rainmaker Digital LLC, available via studiopress.com.
 
-= Installation of Plugin: =
+
+### Installation of Plugin: 
 1. Installing alternatives:
  * *via Admin Dashboard:* Go to **Plugins > Add New**, search for "Genesis What's New Info", click "install"
  * *OR via direct ZIP upload:* Upload the ZIP package via **Plugins > Add New > Upload** in your WP Admin
@@ -62,17 +71,21 @@ This simple & lightweight plugin has currently only one task: bring you access t
 
 **Note:** The "Genesis Framework" is required for this plugin in order to work. If you don't own a copy it yet, this premium parent theme has to be bought. More info about that you'll find here: https://ddwb.me/getgenesis
 
-== Frequently Asked Questions ==
 
-= Where does the content come from? =
+## Frequently Asked Questions 
+
+
+### Where does the content come from? 
 The content of the "What's New" page comes straight from Genesis core! This plugin only hooks in a few links to this *already existing* admin page.
 
 
-= Why a new meta box on Genesis Settings? =
+
+### Why a new meta box on Genesis Settings? 
 The existing "Information" meta box from Genesis core has not much useful info. The new "At a Glance" box brings more info and links, also for the active child theme.
 
 
-= More info on Translations? =
+
+### More info on Translations? 
 
 * English - default, always included
 * German (de_DE): Deutsch - immer dabei! :-)
@@ -82,15 +95,22 @@ The existing "Information" meta box from Genesis core has not much useful info. 
 
 *Note:* All my plugins are internationalized/ translateable by default. This is very important for all users worldwide. So please contribute your language to the plugin to make it even more useful. For translating and validating I recommend the awesome ["Poedit Editor"](https://www.poedit.net/), which works fine on Windows, macOS and Linux.
 
-== Screenshots ==
 
-1. Genesis What's New Info: Left-hand admin menu: new item "What's New (<branch version>)". ([Click here for larger version of screenshot](https://www.dropbox.com/s/1pvf9xhk25zgrx0/screenshot-01.png))
+## Screenshots 
 
-2. Genesis What's New Info: New link to "What's New" page in upgrade notice. ([Click here for larger version of screenshot](https://www.dropbox.com/s/r0o9oyw3vo95el8/screenshot-02.png))
+### 1. Genesis What's New Info: Left-hand admin menu: new item "What's New (<branch version>)". ([Click here for larger version of screenshot](https://www.dropbox.com/s/1pvf9xhk25zgrx0/screenshot-01.png))
+![Genesis What's New Info: Left-hand admin menu: new item "What's New (<branch version>)". ([Click here for larger version of screenshot](https://www.dropbox.com/s/1pvf9xhk25zgrx0/screenshot-01.png)).](https://ps.w.org/genesis-whats-new-info/assets/screenshot-01.png)
 
-== Changelog ==
 
-= 1.3.0 - 2018-08-23 =
+### 2. Genesis What's New Info: New link to "What's New" page in upgrade notice. ([Click here for larger version of screenshot](https://www.dropbox.com/s/r0o9oyw3vo95el8/screenshot-02.png))
+![Genesis What's New Info: New link to "What's New" page in upgrade notice. ([Click here for larger version of screenshot](https://www.dropbox.com/s/r0o9oyw3vo95el8/screenshot-02.png)).](https://ps.w.org/genesis-whats-new-info/assets/screenshot-02.png)
+
+
+
+## Changelog 
+
+
+### 1.3.0 - 2018-08-23 
 * New: Added extra "At a Glance" meta box on Genesis Theme Settings with proper version info, and links to: What's New page, Changelog website, StudioPress Blog, #GenesisWP Facebook Group, #GenesisWP Slack Channel, #GenesisWP Tweets -- Note: this is fully optional, meta box can be removed via "Screen Options", and also via our filter/ WP Core function
 * New: Added `composer.json` file to the plugin's root folder - this is great for developers using Composer
 * New: Added `README.md` file for plugin's GitHub.com repository to make it more readable there
@@ -101,7 +121,8 @@ The existing "Information" meta box from Genesis core has not much useful info. 
 * Tweak: Enhanced, improved and corrected Readme.txt file here - also tweaked FAQ entry
 
 
-= 1.2.0 - 2018-04-20 =
+
+### 1.2.0 - 2018-04-20 
 * New: Release on GitHub.com as well (for issues, development etc.), see here: [https://github.com/deckerweb/genesis-whats-new-info](https://github.com/deckerweb/genesis-whats-new-info)
 * New: New plugin banner and icon on wordpress.org
 * Fix: Make it work again, requires the newest Genesis version 2.6.0 or higher.
@@ -109,46 +130,59 @@ The existing "Information" meta box from Genesis core has not much useful info. 
 * Tweak: Updated translations and `.pot` file.
 
 
-= 1.1.1 - 2014-02-02 =
+
+### 1.1.1 - 2014-02-02 
 * Fix: Fixed PHP notice.
 
 
-= 1.1.0 - 2014-01-27 =
+
+### 1.1.0 - 2014-01-27 
 * New: Added Toolbar integration.
 * Update: Improved translation loading.
 * Update: Minor code and readme adjustments :).
 * Update: Updated German translations and also the .pot file for all translators.
 
 
-= 1.0.0 - 2013-07-16 =
+
+### 1.0.0 - 2013-07-16 
 * Initial release
 * *NOTE:* This plugin is only for Genesis Version 1.9.x or higher!
 
-== Upgrade Notice ==
 
-= 1.3.0 =
+## Upgrade Notice 
+
+
+### 1.3.0 
 New "At a Glance" meta box on Genesis Settings. Plus more tweaks and improvements.
 
-= 1.2.0 =
+
+### 1.2.0 
 Maintenance release. Make the plugin work again.
 
-= 1.1.1 =
+
+### 1.1.1 
 Fixed PHP Notice. Also updated .pot file for translators plus German translations.
 
-= 1.1.0 =
+
+### 1.1.0 
 Maintenance release: Added Toolbar integration. Some internal improvements and updates. Also updated .pot file for translators plus German translations.
 
-= 1.0.0 =
+
+### 1.0.0 
 Just released into the wild.
 
-== Donate ==
+
+## Donate 
 Enjoy using *Genesis What's New Info*? Please consider [making a small donation](https://www.paypal.me/deckerweb) to support the project's continued development.
 
-== Idea Behind / Philosophy ==
+
+## Idea Behind / Philosophy 
 Really simple stuff: bring a link to an already existing Genesis admin page to the left-hand admin menu. Result: "Genesis > What's New"
 
-== Credits ==
+
+## Credits 
 * Thanks to [Gary Jones @garyj](https://twitter.com/garyj) for initial idea to create this plugin! Follow him and support his work.
 
-== Last but not least ==
+
+## Last but not least 
 **Special Thanks go out to my family for allowing me to do such spare time projects (aka free plugins) and supporting me in every possible way!**
