@@ -17,7 +17,7 @@ Easy access of the Genesis What's New Admin overview page - not only on updates 
 ## Get Access to Genesis What's New Admin Page
 This simple & lightweight plugin has currently only one task: bring you access to the "What's New" page for Genesis Framework. You can access it everytime in the left-hand admin menu under "Genesis > What's New". (Before this plugin it did only show up when you did an auto update of Genesis.)
 
-**Please note:** The plugin requires the *Genesis Theme Framework*, a paid premium product released by StudioPress/ Rainmaker Digital LLC (via studiopress.com).
+**Please note:** The plugin requires the *Genesis Theme Framework*, a paid premium product released by StudioPress/ WPEngine, Inc. (via studiopress.com).
 
 
 ### Video of Plugin's Live Demo and Walkthrough: 
@@ -50,7 +50,7 @@ This simple & lightweight plugin has currently only one task: bring you access t
 
 
 ## My Other Plugins 
-* [**Toolbar Extras for Elementor - WordPress Admin Bar Enhanced**](https://wordpress.org/plugins/toolbar-extras/)
+* [**Toolbar Extras for Genesis & Elementor - WordPress Admin Bar Enhanced**](https://wordpress.org/plugins/toolbar-extras/)
 * [**Builder Template Categories - for WordPress Page Builders**](https://wordpress.org/plugins/builder-template-categories/)
 * [Multisite Toolbar Additions](https://wordpress.org/plugins/multisite-toolbar-additions/)
 * [Cleaner Plugin Installer](https://wordpress.org/plugins/cleaner-plugin-installer/)
@@ -58,7 +58,7 @@ This simple & lightweight plugin has currently only one task: bring you access t
 
 ## Installation 
 
-**NOTE:** Only works with *Genesis Framework* as the parent theme. This is a paid premium product by StudioPress/ Rainmaker Digital LLC, available via studiopress.com.
+**NOTE:** Only works with *Genesis Framework* as the parent theme. This is a paid premium product by StudioPress/ WPEngine, Inc., available via studiopress.com.
 
 
 ### Installation of Plugin: 
