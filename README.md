@@ -21,7 +21,7 @@ This simple & lightweight plugin has currently only one task: bring you access t
 
 
 ### Video of Plugin's Live Demo and Walkthrough: 
-[youtube https://www.youtube.com/watch?v=kxK3dBoqXHo]
+[![Video of Plugin's Live Demo and Walkthrough](https://img.youtube.com/vi/kxK3dBoqXHo/0.jpg)](https://www.youtube.com/watch?v=kxK3dBoqXHo)
 [**original video link**](https://www.youtube.com/watch?v=kxK3dBoqXHo) *by plugin developer David Decker*
 
 
