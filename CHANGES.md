@@ -15,7 +15,7 @@
 * New: Added `composer.json` file to the plugin's root folder - this is great for developers using Composer
 * New: Added `README.md` file for plugin's GitHub.com repository to make it more readable there
 * Tweak: Simplied rendering of What's New Page again, hooray! :)
-* Tweak: Changed all filter tags to new format!
+* Tweak: Changed all of the plugin's filter hook tags to new format!
 * Tweak: Added plugins recommendations library by deckerweb to improve the plugin installer tips (old filter function got removed)
 * Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
 * Tweak: Enhanced, improved and corrected Readme.txt file here - also tweaked FAQ entry
