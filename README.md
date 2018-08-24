@@ -5,7 +5,7 @@
 **Requires at least:** 4.7 plus Genesis Framework  
 **Tested up to:** 4.9.8  
 **Requires PHP:** 5.6  
-**Stable tag:** 1.3.0  
+**Stable tag:** 1.3.1
 **License:** GPL-2.0+  
 **License URI:** https://opensource.org/licenses/GPL-2.0  
 
@@ -108,6 +108,10 @@ The existing "Information" meta box from Genesis core has not much useful info. 
 
 
 ## Changelog 
+
+
+### 1.3.1 - 2018-08-24
+* Fix: Bug with wrong constant
 
 
 ### 1.3.0 - 2018-08-24 

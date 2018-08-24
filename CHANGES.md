@@ -10,6 +10,10 @@
 
 ## Changelog of the Plugin
 
+### 1.3.1 - 2018-08-24
+* Fix: Bug with wrong constant
+
+
 ### 1.3.0 - 2018-08-23 
 * New: Added extra "At a Glance" meta box on Genesis Theme Settings with proper version info, and links to: What's New page, Changelog website, StudioPress Blog, #GenesisWP Facebook Group, #GenesisWP Slack Channel, #GenesisWP Tweets -- Note: this is fully optional, meta box can be removed via "Screen Options", and also via our filter/ WP Core function
 * New: Added `composer.json` file to the plugin's root folder - this is great for developers using Composer

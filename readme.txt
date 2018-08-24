@@ -5,7 +5,7 @@ Tags: genesis, genesiswp, genesis framework, what's new, version, branch, update
 Requires at least: 4.7 plus Genesis Framework
 Tested up to: 4.9.8
 Requires PHP: 5.6
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPL-2.0+
 License URI: https://opensource.org/licenses/GPL-2.0
 
@@ -90,6 +90,10 @@ The existing "Information" meta box from Genesis core has not much useful info. 
 
 == Changelog ==
 
+= 1.3.1 - 2018-08-24 =
+* Fix: Bug with wrong constant
+
+
 = 1.3.0 - 2018-08-24 =
 * New: Added extra "At a Glance" meta box on Genesis Theme Settings with proper version info, and links to: What's New page, Changelog website, StudioPress Blog, #GenesisWP Facebook Group, #GenesisWP Slack Channel, #GenesisWP Tweets -- Note: this is fully optional, meta box can be removed via "Screen Options", and also via our filter/ WP Core function
 * New: Added `composer.json` file to the plugin's root folder - this is great for developers using Composer
@@ -125,6 +129,9 @@ The existing "Information" meta box from Genesis core has not much useful info. 
 * *NOTE:* This plugin is only for Genesis Version 1.9.x or higher!
 
 == Upgrade Notice ==
+
+= 1.3.1 =
+New "At a Glance" meta box on Genesis Settings. Plus more tweaks and improvements.
 
 = 1.3.0 =
 New "At a Glance" meta box on Genesis Settings. Plus more tweaks and improvements.

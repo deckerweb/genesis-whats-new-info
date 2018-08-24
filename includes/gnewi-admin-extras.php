@@ -194,4 +194,4 @@ function ddw_gnewi_register_plugin_recommendations( array $plugins ) {
 }  // end function
 
 /** Include class DDWlib Plugin Installer Recommendations */
-require_once( MSTBA_PLUGIN_DIR . 'includes/ddwlib-plugin-installer-recommendations.php' );
+require_once( GNEWI_PLUGIN_DIR . 'includes/ddwlib-plugin-installer-recommendations.php' );
