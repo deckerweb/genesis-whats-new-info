@@ -5,7 +5,7 @@ Tags: genesis, genesiswp, genesis framework, what's new, version, branch, update
 Requires at least: 4.7 plus Genesis Framework
 Tested up to: 4.9.8
 Requires PHP: 5.6
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GPL-2.0+
 License URI: https://opensource.org/licenses/GPL-2.0
 
@@ -40,11 +40,15 @@ This simple & lightweight plugin has currently only one task: bring you access t
 
 = Feedback =
 * I am open for your suggestions and feedback - Thank you for using or trying out one of my plugins!
-* Drop me a line [@deckerweb](https://twitter.com/deckerweb) on Twitter
+* Join our [**Facebook User Community Support Group**](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
 
 == My Other Plugins ==
 * [**Toolbar Extras for Genesis & Elementor - WordPress Admin Bar Enhanced**](https://wordpress.org/plugins/toolbar-extras/)
 * [**Builder Template Categories - for WordPress Page Builders**](https://wordpress.org/plugins/builder-template-categories/)
+* [Genesis Layout Extras](https://wordpress.org/plugins/genesis-layout-extras/)
+* [Genesis Widgetized Not Found & 404](https://wordpress.org/plugins/genesis-widgetized-notfound/)
+* [Genesis Widgetized Footer](https://wordpress.org/plugins/genesis-widgetized-footer/)
+* [Genesis Widgetized Archive](https://wordpress.org/plugins/genesis-widgetized-archive/)
 * [Multisite Toolbar Additions](https://wordpress.org/plugins/multisite-toolbar-additions/)
 * [Cleaner Plugin Installer](https://wordpress.org/plugins/cleaner-plugin-installer/)
 
@@ -82,13 +86,23 @@ The existing "Information" meta box from Genesis core has not much useful info. 
 
 *Note:* All my plugins are internationalized/ translateable by default. This is very important for all users worldwide. So please contribute your language to the plugin to make it even more useful. For translating and validating I recommend the awesome ["Poedit Editor"](https://www.poedit.net/), which works fine on Windows, macOS and Linux.
 
+
 == Screenshots ==
 
 1. Genesis What's New Info: Left-hand admin menu: new item "What's New (<branch version>)". ([Click here for larger version of screenshot](https://www.dropbox.com/s/1pvf9xhk25zgrx0/screenshot-01.png))
 
 2. Genesis What's New Info: New link to "What's New" page in upgrade notice. ([Click here for larger version of screenshot](https://www.dropbox.com/s/r0o9oyw3vo95el8/screenshot-02.png))
 
+
 == Changelog ==
+
+= 1.3.2 - 2018-10-01 =
+* New: Added plugin update message also to Plugins page (overview table)
+* New: Created special [Facebook Group for user community support](https://www.facebook.com/groups/deckerweb.wordpress.plugins/) for all plugins from me (David Decker - DECKERWEB), this one here included! ;-) - [please join at facebook!](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
+* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.1.0) - which brings smaller additions and enhancements, like CSS styles to the upload areas and plugin cards, plus plugin version number on plugin cards
+* Tweak: Small internal code improvements
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+
 
 = 1.3.1 - 2018-08-24 =
 * Fix: Bug with wrong constant
@@ -129,6 +143,9 @@ The existing "Information" meta box from Genesis core has not much useful info. 
 * *NOTE:* This plugin is only for Genesis Version 1.9.x or higher!
 
 == Upgrade Notice ==
+
+= 1.3.2 =
+Maintenance release. Bundled library update. Small tweaks. Update recommended.
 
 = 1.3.1 =
 New "At a Glance" meta box on Genesis Settings. Plus more tweaks and improvements.

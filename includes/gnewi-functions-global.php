@@ -17,6 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since  1.1.0
  * @since  1.3.0 Added more values.
+ * @since  1.3.2 Added FB Group.
  *
  * @return array Array of info values.
  */
@@ -27,6 +28,7 @@ function ddw_gnewi_info_values() {
 		'url_translate'     => 'https://translate.wordpress.org/projects/wp-plugins/genesis-whats-new-info',
 		'url_donate'        => 'https://www.paypal.me/deckerweb',
 		'url_plugin'        => 'https://github.com/deckerweb/genesis-whats-new-info',
+		'url_fb_group'      => 'https://www.facebook.com/groups/deckerweb.wordpress.plugins/',
 		'first_code'        => '2013',
 		'genesis_upgraded'  => admin_url( 'admin.php?page=genesis-upgraded' ),
 		'genesis_changelog' => 'https://www.genesistheme.com/changelog/',
@@ -98,6 +100,7 @@ function ddw_gnewi_get_info_link( $url_key = '', $text = '', $class = '' ) {
  * Get timespan of coding years for this plugin.
  *
  * @since  1.3.0
+ * @since  1.3.2 Improved first year logic.
  *
  * @uses   ddw_gnewi_info_values()
  *
@@ -111,7 +114,7 @@ function ddw_gnewi_coding_years( $first_year = '' ) {
 	$first_year = ( empty( $first_year ) ) ? absint( $gnewi_info[ 'first_code' ] ) : absint( $first_year );
 
 	/** Set year of first released code */
-	$code_first_year = ( '' !== $first_year && date( 'Y' ) !== $first_year ) ? $first_year . '&#x02013;' : '';
+	$code_first_year = ( date( 'Y' ) == $first_year || 0 === $first_year ) ? '' : $first_year . '&#x02013;';
 
 	return $code_first_year . date( 'Y' );
 

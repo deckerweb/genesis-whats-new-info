@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Genesis What's New Info\n"
-"POT-Creation-Date: 2018-08-23 22:25+0200\n"
+"POT-Creation-Date: 2018-10-01 10:33+0200\n"
 "PO-Revision-Date: 2018-04-20 15:13+0200\n"
 "Last-Translator: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
 "Language-Team: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
@@ -77,15 +77,31 @@ msgid "Genesis What's New"
 msgstr ""
 
 #. translators: Plugins page listing
-#: includes/gnewi-admin-extras.php:85
+#: includes/gnewi-admin-extras.php:83
 msgctxt "Plugins page listing"
 msgid "Translations"
 msgstr ""
 
 #. translators: Plugins page listing
-#: includes/gnewi-admin-extras.php:88
+#: includes/gnewi-admin-extras.php:86
+msgctxt "Plugins page listing"
+msgid "Facebook Group"
+msgstr ""
+
+#. translators: Plugins page listing
+#: includes/gnewi-admin-extras.php:89
 msgctxt "Plugins page listing"
 msgid "Donate"
+msgstr ""
+
+#: includes/gnewi-admin-extras.php:303
+msgctxt "Plugin installer: Tab name in installer toolbar"
+msgid "Newest"
+msgstr ""
+
+#: includes/gnewi-admin-extras.php:309
+msgctxt "Plugin card: plugin version"
+msgid "Version:"
 msgstr ""
 
 #: includes/gnewi-genesis-metabox.php:27

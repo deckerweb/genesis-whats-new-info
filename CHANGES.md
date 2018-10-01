@@ -6,15 +6,26 @@
 * [Translate the plugin](https://translate.wordpress.org/projects/wp-plugins/genesis-whats-new-info)
 * [**Donate** for the further development & support of the plugin](https://www.paypal.me/deckerweb)
 * [Plugin's documentation & FAQ](https://wordpress.org/plugins/genesis-whats-new-info/#faq)
+* [Facebook Community User Group](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
 
 
 ## Changelog of the Plugin
 
+### 1.3.2 - 2018-10-01
+* New: Added plugin update message also to Plugins page (overview table)
+* New: Created special [Facebook Group for user community support](https://www.facebook.com/groups/deckerweb.wordpress.plugins/) for all plugins from me (David Decker - DECKERWEB), this one here included! ;-) - [please join at facebook!](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
+* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.1.0) - which brings smaller additions and enhancements, like CSS styles to the upload areas and plugin cards, plus plugin version number on plugin cards
+* Tweak: Small internal code improvements
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+
+
 ### 1.3.1 - 2018-08-24
+
 * Fix: Bug with wrong constant
 
 
 ### 1.3.0 - 2018-08-23 
+
 * New: Added extra "At a Glance" meta box on Genesis Theme Settings with proper version info, and links to: What's New page, Changelog website, StudioPress Blog, #GenesisWP Facebook Group, #GenesisWP Slack Channel, #GenesisWP Tweets -- Note: this is fully optional, meta box can be removed via "Screen Options", and also via our filter/ WP Core function
 * New: Added `composer.json` file to the plugin's root folder - this is great for developers using Composer
 * New: Added `README.md` file for plugin's GitHub.com repository to make it more readable there

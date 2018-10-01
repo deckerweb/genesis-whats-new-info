@@ -14,7 +14,7 @@
  * Plugin Name:  Genesis What's New Info
  * Plugin URI:   https://github.com/deckerweb/genesis-whats-new-info/
  * Description:  Easy access of the Genesis What's New Admin overview page - not only on updates but everytime. Makes sense, heh? :)
- * Version:      1.3.1
+ * Version:      1.3.2
  * Author:       David Decker - DECKERWEB
  * Author URI:   https://deckerweb.de/
  * License:      GPL-2.0+
