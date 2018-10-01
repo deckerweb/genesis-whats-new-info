@@ -79,6 +79,17 @@ function ddw_gnewi_plugin_links( $gnewi_links, $gnewi_file ) {
 	/** List additional links only for this plugin */
 	if ( $gnewi_file === GNEWI_PLUGIN_BASEDIR . 'genesis-whats-new-info.php' ) {
 
+		?>
+			<style type="text/css">
+				tr[data-slug="genesis-whats-new-info"] .plugin-version-author-uri a.dashicons-before:before {
+					font-size: 17px;
+					margin-right: 2px;
+					opacity: .85;
+					vertical-align: sub;
+				}
+			</style>
+		<?php
+
 		/* translators: Plugins page listing */
 		$gnewi_links[] = ddw_gnewi_get_info_link( 'url_translate', esc_html_x( 'Translations', 'Plugins page listing', 'genesis-whats-new-info' ), 'dashicons-before dashicons-translation' );
 
