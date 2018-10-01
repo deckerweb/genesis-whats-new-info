@@ -168,6 +168,13 @@ The existing "Information" meta box from Genesis core has not much useful info. 
 
 ## Upgrade Notice 
 
+### 1.3.2
+Maintenance release. Bundled library update. Small tweaks. Update recommended.
+
+
+### 1.3.1
+New "At a Glance" meta box on Genesis Settings. Plus more tweaks and improvements.
+
 
 ### 1.3.0 
 New "At a Glance" meta box on Genesis Settings. Plus more tweaks and improvements.
