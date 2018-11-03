@@ -18,6 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since  1.1.0
  * @since  1.3.0 Added more values.
  * @since  1.3.2 Added FB Group.
+ * @since  1.3.3 Added license.
  *
  * @return array Array of info values.
  */
@@ -30,6 +31,8 @@ function ddw_gnewi_info_values() {
 		'url_plugin'        => 'https://github.com/deckerweb/genesis-whats-new-info',
 		'url_fb_group'      => 'https://www.facebook.com/groups/deckerweb.wordpress.plugins/',
 		'first_code'        => '2013',
+		'license'           => 'GPL-2.0-or-later',
+		'url_license'       => 'https://opensource.org/licenses/GPL-2.0',
 		'genesis_upgraded'  => admin_url( 'admin.php?page=genesis-upgraded' ),
 		'genesis_changelog' => 'https://www.genesistheme.com/changelog/',
 		'studiopress_blog'  => 'https://studiopress.blog/',

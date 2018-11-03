@@ -81,7 +81,7 @@ function ddw_gnewi_plugin_links( $gnewi_links, $gnewi_file ) {
 
 		?>
 			<style type="text/css">
-				tr[data-slug="genesis-whats-new-info"] .plugin-version-author-uri a.dashicons-before:before {
+				tr[data-plugin="<?php echo $gnewi_file; ?>"] .plugin-version-author-uri a.dashicons-before:before {
 					font-size: 17px;
 					margin-right: 2px;
 					opacity: .85;

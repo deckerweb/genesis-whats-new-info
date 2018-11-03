@@ -4,7 +4,7 @@
   "keywords": ["genesis", "genesiswp", "genesis framework", "what's new", "version", "admin", "new", "upgrade", "update", "deckerweb"],
   "type": "wordpress-plugin",
   "homepage": "https://github.com/deckerweb/genesis-whats-new-info",
-  "license": "GPL-2.0+",
+  "license": "GPL-2.0-or-later",
   "authors": [
     {
       "name": "David Decker",

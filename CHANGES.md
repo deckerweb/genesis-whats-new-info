@@ -11,7 +11,14 @@
 
 ## Changelog of the Plugin
 
+### 1.3.3 - 2018-11-03
+
+* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.0) - which brings enhanced CSS styles, including for the "Dark Mode" plugin
+* Tweak: Few internal code tweaks and improvements
+
+
 ### 1.3.2 - 2018-10-01
+
 * New: Added plugin update message also to Plugins page (overview table)
 * New: Created special [Facebook Group for user community support](https://www.facebook.com/groups/deckerweb.wordpress.plugins/) for all plugins from me (David Decker - DECKERWEB), this one here included! ;-) - [please join at facebook!](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
 * Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.1.0) - which brings smaller additions and enhancements, like CSS styles to the upload areas and plugin cards, plus plugin version number on plugin cards

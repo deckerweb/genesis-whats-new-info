@@ -7,17 +7,17 @@
  * @package      Genesis What's New Info
  * @author       David Decker
  * @copyright    Copyright (c) 2013-2018, David Decker - DECKERWEB
- * @license      GPL-2.0+
+ * @license      GPL-2.0-or-later
  * @link         https://deckerweb.de/twitter
  *
  * @wordpress-plugin
  * Plugin Name:  Genesis What's New Info
  * Plugin URI:   https://github.com/deckerweb/genesis-whats-new-info/
  * Description:  Easy access of the Genesis What's New Admin overview page - not only on updates but everytime. Makes sense, heh? :)
- * Version:      1.3.2
+ * Version:      1.3.3
  * Author:       David Decker - DECKERWEB
  * Author URI:   https://deckerweb.de/
- * License:      GPL-2.0+
+ * License:      GPL-2.0-or-later
  * License URI:  https://opensource.org/licenses/GPL-2.0
  * Text Domain:  genesis-whats-new-info
  * Domain Path:  /languages/
@@ -57,6 +57,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
+/** Set plugin version */
+define( 'GNEWI_VERSION', '1.3.3' );
+
 /** Plugin directory */
 define( 'GNEWI_PLUGIN_DIR', trailingslashit( dirname( __FILE__ ) ) );
 

@@ -5,8 +5,8 @@ Tags: genesis, genesiswp, genesis framework, what's new, version, branch, update
 Requires at least: 4.7 plus Genesis Framework
 Tested up to: 4.9.8
 Requires PHP: 5.6
-Stable tag: 1.3.2
-License: GPL-2.0+
+Stable tag: 1.3.3
+License: GPL-2.0-or-later
 License URI: https://opensource.org/licenses/GPL-2.0
 
 Easy access of the Genesis What's New Admin overview page - not only on updates but everytime. Makes sense, heh? :)
@@ -96,6 +96,11 @@ The existing "Information" meta box from Genesis core has not much useful info. 
 
 == Changelog ==
 
+= 1.3.3 - 2018-11-03 =
+* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.0) - which brings enhanced CSS styles, including for the "Dark Mode" plugin
+* Tweak: Few internal code tweaks and improvements
+
+
 = 1.3.2 - 2018-10-01 =
 * New: Added plugin update message also to Plugins page (overview table)
 * New: Created special [Facebook Group for user community support](https://www.facebook.com/groups/deckerweb.wordpress.plugins/) for all plugins from me (David Decker - DECKERWEB), this one here included! ;-) - [please join at facebook!](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
@@ -143,6 +148,9 @@ The existing "Information" meta box from Genesis core has not much useful info. 
 * *NOTE:* This plugin is only for Genesis Version 1.9.x or higher!
 
 == Upgrade Notice ==
+
+= 1.3.3 =
+Maintenance release. Bundled library update. Small tweaks. Update recommended.
 
 = 1.3.2 =
 Maintenance release. Bundled library update. Small tweaks. Update recommended.
