@@ -23,8 +23,8 @@ This simple & lightweight plugin has currently only one task: bring you access t
 
 
 ### Video of Plugin's Live Demo and Walkthrough: 
-[![Video of Plugin's Live Demo and Walkthrough](https://img.youtube.com/vi/kxK3dBoqXHo/0.jpg)](https://www.youtube.com/watch?v=kxK3dBoqXHo)
-[**original video link**](https://www.youtube.com/watch?v=kxK3dBoqXHo) *by plugin developer David Decker*
+[![Video of Plugin's Live Demo and Walkthrough](https://img.youtube.com/vi/w6CUGbHm5PI/0.jpg)](https://www.youtube.com/watch?v=w6CUGbHm5PI)
+[**original video link**](https://www.youtube.com/watch?v=w6CUGbHm5PI) *by plugin developer David Decker*
 
 
 ### Requirements 
@@ -116,6 +116,7 @@ The existing "Information" meta box from Genesis core has not much useful info. 
 ## Changelog 
 
 ### 1.3.3 - 2018-11-03
+* New: [Video of plugin walkthrough and live demo](https://www.youtube.com/watch?v=w6CUGbHm5PI)
 * Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.0) - which brings enhanced CSS styles, including for the "Dark Mode" plugin
 * Tweak: Few internal code tweaks and improvements
 

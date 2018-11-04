@@ -13,6 +13,7 @@
 
 ### 1.3.3 - 2018-11-03
 
+* New: [Video of plugin walkthrough and live demo](https://www.youtube.com/watch?v=w6CUGbHm5PI)
 * Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.0) - which brings enhanced CSS styles, including for the "Dark Mode" plugin
 * Tweak: Few internal code tweaks and improvements
 

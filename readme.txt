@@ -19,8 +19,8 @@ This simple & lightweight plugin has currently only one task: bring you access t
 **Please note:** The plugin requires the *Genesis Theme Framework*, a paid premium product released by StudioPress/ WPEngine, Inc. (via studiopress.com).
 
 = Video of Plugin's Live Demo and Walkthrough: =
-[youtube https://www.youtube.com/watch?v=kxK3dBoqXHo]
-[**original video link**](https://www.youtube.com/watch?v=kxK3dBoqXHo) *by plugin developer David Decker*
+[youtube https://www.youtube.com/watch?v=w6CUGbHm5PI]
+[**original video link**](https://www.youtube.com/watch?v=w6CUGbHm5PI) *by plugin developer David Decker*
 
 = Requirements =
 * Genesis version 2.6.x or higher (obviously :).
@@ -97,6 +97,7 @@ The existing "Information" meta box from Genesis core has not much useful info. 
 == Changelog ==
 
 = 1.3.3 - 2018-11-03 =
+* New: [Video of plugin walkthrough and live demo](https://www.youtube.com/watch?v=w6CUGbHm5PI)
 * Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.2.0) - which brings enhanced CSS styles, including for the "Dark Mode" plugin
 * Tweak: Few internal code tweaks and improvements
 
