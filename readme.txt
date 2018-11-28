@@ -45,6 +45,7 @@ This simple & lightweight plugin has currently only one task: bring you access t
 == My Other Plugins ==
 * [**Toolbar Extras for Genesis & Elementor - WordPress Admin Bar Enhanced**](https://wordpress.org/plugins/toolbar-extras/)
 * [**Builder Template Categories - for WordPress Page Builders**](https://wordpress.org/plugins/builder-template-categories/)
+* [**Polylang Connect for Elementor – Language Switcher & Template Tweaks**](https://wordpress.org/plugins/connect-polylang-elementor/)
 * [Genesis Layout Extras](https://wordpress.org/plugins/genesis-layout-extras/)
 * [Genesis Widgetized Not Found & 404](https://wordpress.org/plugins/genesis-widgetized-notfound/)
 * [Genesis Widgetized Footer](https://wordpress.org/plugins/genesis-widgetized-footer/)
