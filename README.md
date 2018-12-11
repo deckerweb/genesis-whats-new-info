@@ -3,7 +3,7 @@
 **Donate link:** https://www.paypal.me/deckerweb  
 **Tags:** genesis, genesiswp, genesis framework, what's new, version, branch, updates, update, upgrade, admin, deckerweb  
 **Requires at least:** 4.7 plus Genesis Framework  
-**Tested up to:** 4.9.8  
+**Tested up to:** 5.0.0  
 **Requires PHP:** 5.6  
 **Stable tag:** 1.3.3
 **License:** GPL-2.0-or-later  
