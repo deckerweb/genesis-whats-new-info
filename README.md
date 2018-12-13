@@ -3,7 +3,7 @@
 **Donate link:** https://www.paypal.me/deckerweb  
 **Tags:** genesis, genesiswp, genesis framework, what's new, version, branch, updates, update, upgrade, admin, deckerweb  
 **Requires at least:** 4.7 plus Genesis Framework  
-**Tested up to:** 5.0.0  
+**Tested up to:** 5.0  
 **Requires PHP:** 5.6  
 **Stable tag:** 1.3.3
 **License:** GPL-2.0-or-later  
@@ -55,6 +55,7 @@ This simple & lightweight plugin has currently only one task: bring you access t
 * [**Toolbar Extras for Genesis & Elementor - WordPress Admin Bar Enhanced**](https://wordpress.org/plugins/toolbar-extras/)
 * [**Builder Template Categories - for WordPress Page Builders**](https://wordpress.org/plugins/builder-template-categories/)
 * [**Polylang Connect for Elementor – Language Switcher & Template Tweaks**](https://wordpress.org/plugins/connect-polylang-elementor/)
+* [**Simple Download Manager for WP Document Revisions**](https://wordpress.org/plugins/wpdr-simple-downloads/)
 * [Genesis Layout Extras](https://wordpress.org/plugins/genesis-layout-extras/)
 * [Genesis Widgetized Not Found & 404](https://wordpress.org/plugins/genesis-widgetized-notfound/)
 * [Genesis Widgetized Footer](https://wordpress.org/plugins/genesis-widgetized-footer/)
