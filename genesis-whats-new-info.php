@@ -6,15 +6,16 @@
  *
  * @package      Genesis What's New Info
  * @author       David Decker
- * @copyright    Copyright (c) 2013-2018, David Decker - DECKERWEB
+ * @copyright    Copyright (c) 2013-2019, David Decker - DECKERWEB
  * @license      GPL-2.0-or-later
  * @link         https://deckerweb.de/twitter
+ * @link         https://www.facebook.com/groups/deckerweb.wordpress.plugins/
  *
  * @wordpress-plugin
  * Plugin Name:  Genesis What's New Info
  * Plugin URI:   https://github.com/deckerweb/genesis-whats-new-info/
  * Description:  Easy access of the Genesis What's New Admin overview page - not only on updates but everytime. Makes sense, heh? :)
- * Version:      1.3.3
+ * Version:      1.3.4
  * Author:       David Decker - DECKERWEB
  * Author URI:   https://deckerweb.de/
  * License:      GPL-2.0-or-later
@@ -24,7 +25,7 @@
  * Requires WP:  4.7
  * Requires PHP: 5.6
  *
- * Copyright (c) 2013-2018 David Decker - DECKERWEB
+ * Copyright (c) 2013-2019 David Decker - DECKERWEB
  *
  *     This file is part of Genesis What's New Info,
  *     a plugin for WordPress.
@@ -58,7 +59,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 /** Set plugin version */
-define( 'GNEWI_VERSION', '1.3.3' );
+define( 'GNEWI_VERSION', '1.3.4' );
 
 /** Plugin directory */
 define( 'GNEWI_PLUGIN_DIR', trailingslashit( dirname( __FILE__ ) ) );
@@ -73,9 +74,9 @@ add_action( 'init', 'ddw_gnewi_load_translations', 1 );
  *
  * @since 1.2.0
  *
- * @uses  get_user_locale()
- * @uses  load_textdomain() To load translations first from WP_LANG_DIR sub folder.
- * @uses  load_plugin_textdomain() To additionally load default translations from plugin folder (default).
+ * @uses get_user_locale()
+ * @uses load_textdomain() To load translations first from WP_LANG_DIR sub folder.
+ * @uses load_plugin_textdomain() To additionally load default translations from plugin folder (default).
  */
 function ddw_gnewi_load_translations() {
 
@@ -118,10 +119,10 @@ register_activation_hook( __FILE__, 'ddw_gnewi_activation_check' );
  *
  * @since 1.0.0
  *
- * @uses  ddw_gnewi_load_translations()
- * @uses  get_template_directory()
- * @uses  deactivate_plugins()
- * @uses  wp_die()
+ * @uses ddw_gnewi_load_translations()
+ * @uses get_template_directory()
+ * @uses deactivate_plugins()
+ * @uses wp_die()
  */
 function ddw_gnewi_activation_check() {
 
@@ -201,7 +202,7 @@ function ddw_gnewi_init() {
 /**
  * Check for active Genesis admin menu display options - per user.
  *
- * @since  1.1.0
+ * @since 1.1.0
  *
  * @return bool Returns TRUE if any of the Genesis core admin pages are active
  *              for the current user, otherwise FALSE.
@@ -237,10 +238,10 @@ add_action( 'admin_menu', 'ddw_gnewi_admin_init', 11 );
  * @since 1.2.0 Make it work for Genesis 2.6.0 or higher.
  * @since 1.3.0 Simplified, adhere more to WordPress standards.
  *
- * @uses  ddw_gnewi_genesis_admin_menu_active()
- * @uses  genesis_is_menu_page()
- * @uses  PARENT_THEME_BRANCH
- * @uses  ddw_gnewi_render_page_genesis_upgraded() Callback to render Genesis' page.
+ * @uses ddw_gnewi_genesis_admin_menu_active()
+ * @uses genesis_is_menu_page()
+ * @uses PARENT_THEME_BRANCH
+ * @uses ddw_gnewi_render_page_genesis_upgraded() Callback to render Genesis' page.
  */
 function ddw_gnewi_admin_init() {
 
@@ -291,10 +292,10 @@ function ddw_gnewi_upgrade_notice_helper() {
  *
  * Currently only used for pre-release update notices.
  *
- * @since  1.0.0
+ * @since 1.0.0
  *
- * @uses   genesis_get_option()   Get theme setting value.
- * @uses   genesis_is_menu_page() Check that we're targeting a specific Genesis admin page.
+ * @uses genesis_get_option()   Get theme setting value.
+ * @uses genesis_is_menu_page() Check that we're targeting a specific Genesis admin page.
  *
  * @return null Returns early if not on the Theme Settings page.
  */
@@ -336,9 +337,9 @@ add_action( 'admin_bar_menu', 'ddw_gnewi_add_toolbar_items', 90 );
 /**
  * Add "Genesis What's new" Toolbar item.
  *
- * @since  1.1.0
+ * @since 1.1.0
  *
- * @uses   ddw_gnewi_genesis_admin_menu_active()
+ * @uses ddw_gnewi_genesis_admin_menu_active()
  *
  * @global mixed $GLOBALS[ 'wp_admin_bar' ]
  */

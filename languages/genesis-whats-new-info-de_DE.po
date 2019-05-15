@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Genesis What's New Info\n"
-"POT-Creation-Date: 2018-10-01 10:33+0200\n"
-"PO-Revision-Date: 2018-10-01 10:33+0200\n"
+"POT-Creation-Date: 2019-05-07 12:10+0200\n"
+"PO-Revision-Date: 2019-05-07 12:10+0200\n"
 "Last-Translator: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
 "Language-Team: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #. translators: 1 = Plugin name / 2 & 3 = Open and close anchor tags
-#: genesis-whats-new-info.php:137
+#: genesis-whats-new-info.php:141
 #, php-format
 msgid ""
 "Sorry, you cannot activate the %1$s plugin unless you have installed the "
@@ -32,49 +32,50 @@ msgstr ""
 "neueste Version des %2$sGenesis Frameworks%3$s nicht installiert ist."
 
 #. Plugin Name of the plugin/theme
-#: genesis-whats-new-info.php:138 genesis-whats-new-info.php:146
+#: genesis-whats-new-info.php:142 genesis-whats-new-info.php:150
+#: includes/gnewi-admin-extras.php:123
 msgid "Genesis What's New Info"
 msgstr "Genesis Was ist neu Infos"
 
-#: genesis-whats-new-info.php:146
+#: genesis-whats-new-info.php:150 includes/gnewi-admin-extras.php:123
 msgid "Plugin"
 msgstr "Plugin"
 
-#: genesis-whats-new-info.php:255
+#: genesis-whats-new-info.php:259
 #, php-format
 msgid "Welcome to Genesis %s"
 msgstr "Willkommen zu Genesis Version %s"
 
-#: genesis-whats-new-info.php:256 includes/gnewi-admin-extras.php:45
+#: genesis-whats-new-info.php:260 includes/gnewi-admin-extras.php:34
 msgid "What's New"
 msgstr "Was ist neu"
 
-#: genesis-whats-new-info.php:309
+#: genesis-whats-new-info.php:313
 #, php-format
 msgid "Congratulations! You are now rocking Genesis %s"
 msgstr "Glückwunsch! Du rockst jetzt mit Genesis, Version %s"
 
-#: genesis-whats-new-info.php:317
+#: genesis-whats-new-info.php:321
 msgid "See what's new in this version/ branch"
 msgstr "Schauen, was neu ist neu in dieser Version"
 
-#: genesis-whats-new-info.php:358
+#: genesis-whats-new-info.php:362
 msgid "Genesis: About &amp; What's New"
 msgstr "Genesis: Über &amp; Was neu ist"
 
 #. translators: Label of link title attribute
-#: genesis-whats-new-info.php:361
+#: genesis-whats-new-info.php:365
 msgctxt "Label of link title attribute"
 msgid "Genesis: About &amp; What's New"
 msgstr "Genesis: Über &amp; Was neu ist"
 
 #. translators: %s - Label of Admin page ("Genesis Whats's New")
-#: includes/gnewi-admin-extras.php:42
+#: includes/gnewi-admin-extras.php:31
 #, php-format
 msgid "Go to the %s admin page"
 msgstr "Zur %s Adminseite gehen &hellip;"
 
-#: includes/gnewi-admin-extras.php:43
+#: includes/gnewi-admin-extras.php:32
 msgid "Genesis What's New"
 msgstr "Genesis Was ist neu"
 
@@ -96,15 +97,69 @@ msgctxt "Plugins page listing"
 msgid "Donate"
 msgstr "Spenden"
 
-#: includes/gnewi-admin-extras.php:303
+#. translators: Plugins page listing
+#: includes/gnewi-admin-extras.php:92
+msgctxt "Plugins page listing"
+msgid "Join our Newsletter"
+msgstr "Newsletter jetzt!"
+
+#: includes/gnewi-admin-extras.php:119
+msgid "Undefined"
+msgstr "Nicht definiert"
+
+#: includes/gnewi-admin-extras.php:126
+msgid "Plugin version"
+msgstr "Plugin-Version"
+
+#: includes/gnewi-admin-extras.php:201
+msgid "Genesis Plugins from the Plugin Directory"
+msgstr "Genesis Plugins aus dem Pluginverzeichnis"
+
+#: includes/gnewi-admin-extras.php:202
+msgid "Genesis Plugins"
+msgstr "Genesis Plugins"
+
+#: includes/gnewi-admin-extras.php:414
 msgctxt "Plugin installer: Tab name in installer toolbar"
 msgid "Newest"
 msgstr "Neueste"
 
-#: includes/gnewi-admin-extras.php:309
+#: includes/gnewi-admin-extras.php:420
 msgctxt "Plugin card: plugin version"
 msgid "Version:"
 msgstr "Version:"
+
+#: includes/gnewi-admin-extras.php:426
+msgctxt "Plugin installer: Tab name in installer toolbar"
+msgid "deckerweb Plugins"
+msgstr "deckerweb Plugins"
+
+#: includes/gnewi-admin-extras.php:432
+msgctxt "Plugin installer: Page title"
+msgid "deckerweb Plugins"
+msgstr "deckerweb Plugins"
+
+#: includes/gnewi-admin-extras.php:437
+msgid ""
+"Great helper tools for Site Builders to save time and get more productive"
+msgstr ""
+"Großartige Helferlein-Plugins für Site-Builder, um wertvolle Zeit zu sparen "
+"und noch produktiver zu werden."
+
+#: includes/gnewi-admin-extras.php:440
+#, php-format
+msgid "You can use any of our free plugins or premium plugins from %s"
+msgstr ""
+"Du kannst jedes unserer kostenlosen Plugins oder Premium-Plugins von %s "
+"verwenden."
+
+#: includes/gnewi-admin-extras.php:444
+msgid "Join our Newsletter"
+msgstr "Newsletter jetzt!"
+
+#: includes/gnewi-admin-extras.php:446
+msgid "Facebook User Group"
+msgstr "Facebook-Nutzergruppe"
 
 #: includes/gnewi-genesis-metabox.php:27
 msgid "At a Glance"
@@ -114,7 +169,7 @@ msgstr "Auf einen Blick"
 msgid "Genesis Framework"
 msgstr "Genesis Framework"
 
-#: includes/gnewi-genesis-metabox.php:56 includes/gnewi-genesis-metabox.php:70
+#: includes/gnewi-genesis-metabox.php:56 includes/gnewi-genesis-metabox.php:71
 msgid "Version"
 msgstr "Version"
 
@@ -131,26 +186,30 @@ msgid "Genesis Framework Changelog"
 msgstr "Genesis Framework Changelog"
 
 #: includes/gnewi-genesis-metabox.php:59
+msgid "Genesis Developer Documentation"
+msgstr "Genesis Entwicklerdokumentation"
+
+#: includes/gnewi-genesis-metabox.php:60
 msgid "Official StudioPress Blog"
 msgstr "Offizieller StudioPress Blog"
 
-#: includes/gnewi-genesis-metabox.php:60
+#: includes/gnewi-genesis-metabox.php:61
 msgid "#GenesisWP Facebook Community Group"
 msgstr "#GenesisWP Facebook Community-Gruppe"
 
-#: includes/gnewi-genesis-metabox.php:61
+#: includes/gnewi-genesis-metabox.php:62
 msgid "#GenesisWP Community Slack Channel"
 msgstr "#GenesisWP Community Slack-Kanal"
 
-#: includes/gnewi-genesis-metabox.php:62
+#: includes/gnewi-genesis-metabox.php:63
 msgid "#GenesisWP Tweets"
 msgstr "#GenesisWP Tweets"
 
-#: includes/gnewi-genesis-metabox.php:68
+#: includes/gnewi-genesis-metabox.php:69
 msgid "Active Child Theme"
 msgstr "Aktives Child-Theme"
 
-#: includes/gnewi-genesis-metabox.php:75
+#: includes/gnewi-genesis-metabox.php:76
 msgid "View Changelog (Markdown file, .md)"
 msgstr "Changelog aufrufen (Markdown-Datei, .md)"
 

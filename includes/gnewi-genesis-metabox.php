@@ -39,8 +39,8 @@ function ddw_gnewi_add_meta_box( $_genesis_theme_settings_pagehook ) {
  *
  * @since 1.3.0
  *
- * @uses  ddw_gnewi_get_info_url()
- * @uses  ddw_gnewi_get_info_link()
+ * @uses ddw_gnewi_get_info_url()
+ * @uses ddw_gnewi_get_info_link()
  */
 function ddw_gnewi_render_meta_box() {
 
@@ -56,6 +56,7 @@ function ddw_gnewi_render_meta_box() {
 					<p><span class="dashicons-before dashicons-info"></span> <?php _e( 'Version', 'genesis-whats-new-info' ); ?>: <?php echo PARENT_THEME_VERSION; ?><?php echo defined( 'PARENT_THEME_RELEASE_DATE' ) ? ' / ' . __( 'Release Date', 'genesis-whats-new-info' ) . ': ' . PARENT_THEME_RELEASE_DATE : ''; ?></p>
 					<p><span class="dashicons-before dashicons-info"></span> <a href="<?php echo ddw_gnewi_get_info_url( 'genesis_upgraded' ); ?>"><?php _e( 'What\'s New Update Page', 'genesis-whats-new-info' ); ?></a></p>
 					<p><span class="dashicons-before dashicons-media-code"></span> <?php echo ddw_gnewi_get_info_link( 'genesis_changelog', __( 'Genesis Framework Changelog', 'genesis-whats-new-info' ) ); ?></p>
+					<p><span class="dashicons-before dashicons-admin-generic"></span> <?php echo ddw_gnewi_get_info_link( 'genesis_dev_docs', __( 'Genesis Developer Documentation', 'genesis-whats-new-info' ) ); ?></p>
 					<p><span class="dashicons-before dashicons-admin-post"></span> <?php echo ddw_gnewi_get_info_link( 'studiopress_blog', __( 'Official StudioPress Blog', 'genesis-whats-new-info' ) ); ?></p>
 					<p><span class="dashicons-before dashicons-facebook"></span> <?php echo ddw_gnewi_get_info_link( 'genesiswp_fbgroup', __( '#GenesisWP Facebook Community Group', 'genesis-whats-new-info' ) ); ?></p>
 					<p><span class="dashicons-before dashicons-format-chat"></span> <?php echo ddw_gnewi_get_info_link( 'genesiswp_slack', __( '#GenesisWP Community Slack Channel', 'genesis-whats-new-info' ) ); ?></p>
